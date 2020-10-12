@@ -11,7 +11,7 @@ $menuBackground: #000000;
 $formInput: #cbcbcb;
 $footerColor: #989898;
 $animate: all 0.4s ease;
-$transitionSpeed: 0.75s;
+$transitionSpeed: 0.45s;
 
 * {
   box-sizing: border-box;
@@ -614,6 +614,145 @@ footer {
 
 /********** Mobile phones**********/
 @media (max-width: 575px) {
+  nav {
+    //   height: 70vh;
+    //   width: 20em;
+    float: left;
+    position: sticky;
+    z-index: 3;
+    top: 0px;
+    left: 0px;
+    // border: 2px solid white;
+
+    .nav-container {
+      .toggler {
+        position: sticky;
+        width: 50px;
+        height: 50px;
+        @include topLeftZ();
+        z-index: 2;
+        opacity: 0;
+        cursor: pointer;
+
+        &:checked + .hamburger > div {
+          transform: rotate(135deg);
+          transition: $animate;
+          background-color: $menuBackground;
+
+          //Make an X on check
+          //collapse and extend div rotation
+          &::before,
+          &::after {
+            top: 0;
+            transform: rotate(90deg);
+          }
+        }
+        &:checked:hover + .hamburger > div {
+          transform: rotate(360deg);
+          transition: $animate;
+        }
+        &:checked ~ .menu {
+          display: flex;
+          pointer-events: all;
+        }
+        &:checked ~ .menu > .overlay {
+          transform: scale(1);
+          transition: $animate;
+          transition-duration: $transitionSpeed;
+        }
+        &:checked ~ .menu > .overlay > div {
+          //    opacity: 0.75;
+        }
+      }
+      .hamburger {
+        position: absolute;
+        @include topLeftZ();
+        @include flexCenter();
+        z-index: 1;
+        background-color: rgba($color: #ffffff, $alpha: 0.5);
+        border-radius: 5px;
+        box-shadow: -3px 3px 10px $mainBlue;
+        width: 60px;
+        height: 60px;
+        padding: 1em 1rem;
+
+        > div {
+          position: relative;
+          background-color: $mainBlue;
+          height: 2px;
+          width: 100%;
+
+          &::before,
+          &::after {
+            content: "";
+            height: 2px;
+            width: 100%;
+            background: inherit;
+            position: absolute;
+            top: -10px;
+            z-index: 1;
+          }
+          //adding hamburger bottom line
+          &::after {
+            top: 10px;
+          }
+        }
+      }
+
+      .menu {
+        position: absolute;
+        @include topLeftZ();
+        @include flexCenter();
+        height: 70vh;
+        width: 18em;
+        overflow: hidden;
+        display: flex;
+        border-radius: 0px 0px 50px 15px;
+        pointer-events: none;
+
+        .overlay {
+          @include flexCenter();
+          height: 200vw;
+          width: 150vw;
+          background-color: rgba($color: $menuBackground, $alpha: 0.9);
+          transform: scale(0);
+          transition: $animate;
+          // border-radius: 150px;
+          border-radius: 60%;
+
+          div {
+            width: 100vw;
+            @include flexCenter();
+            flex: none;
+            //   height: 70vh;
+            text-align: center;
+
+            .nav-links li {
+              list-style: none;
+              // justify-content: space-around;
+              margin: 15px;
+              padding: 0.75em 0.75rem;
+              color: $darkBackcolor;
+              width: 100%;
+              border-radius: 10px;
+
+              &:hover {
+                color: $auto;
+                background-color: $contrastColor;
+              }
+              a {
+                text-decoration: none;
+                color: inherit;
+                font-size: 1.8em;
+                font-weight: 500;
+                width: 20em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   .external-links {
     @include externalSmalldevice();
   }

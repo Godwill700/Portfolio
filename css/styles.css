@@ -65,8 +65,8 @@ nav .nav-container .toggler:checked ~ .menu > .overlay {
           transform: scale(1);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  -webkit-transition-duration: 0.75s;
-          transition-duration: 0.75s;
+  -webkit-transition-duration: 0.45s;
+          transition-duration: 0.45s;
 }
 
 nav .nav-container .hamburger {
@@ -773,6 +773,171 @@ footer .copy {
 
 /********** Mobile phones**********/
 @media (max-width: 575px) {
+  nav {
+    float: left;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 3;
+    top: 0px;
+    left: 0px;
+  }
+  nav .nav-container .toggler {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+  }
+  nav .nav-container .toggler:checked + .hamburger > div {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    background-color: #000000;
+  }
+  nav .nav-container .toggler:checked + .hamburger > div::before, nav .nav-container .toggler:checked + .hamburger > div::after {
+    top: 0;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  nav .nav-container .toggler:checked:hover + .hamburger > div {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  nav .nav-container .toggler:checked ~ .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    pointer-events: all;
+  }
+  nav .nav-container .toggler:checked ~ .menu > .overlay {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    -webkit-transition-duration: 0.45s;
+            transition-duration: 0.45s;
+  }
+  nav .nav-container .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    -webkit-box-shadow: -3px 3px 10px #012132;
+            box-shadow: -3px 3px 10px #012132;
+    width: 60px;
+    height: 60px;
+    padding: 1em 1rem;
+  }
+  nav .nav-container .hamburger > div {
+    position: relative;
+    background-color: #012132;
+    height: 2px;
+    width: 100%;
+  }
+  nav .nav-container .hamburger > div::before, nav .nav-container .hamburger > div::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: inherit;
+    position: absolute;
+    top: -10px;
+    z-index: 1;
+  }
+  nav .nav-container .hamburger > div::after {
+    top: 10px;
+  }
+  nav .nav-container .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 70vh;
+    width: 18em;
+    overflow: hidden;
+    display: flex;
+    border-radius: 0px 0px 50px 15px;
+    pointer-events: none;
+  }
+  nav .nav-container .menu .overlay {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 200vw;
+    width: 150vw;
+    background-color: rgba(0, 0, 0, 0.9);
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    border-radius: 60%;
+  }
+  nav .nav-container .menu .overlay div {
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    text-align: center;
+  }
+  nav .nav-container .menu .overlay div .nav-links li {
+    list-style: none;
+    margin: 15px;
+    padding: 0.75em 0.75rem;
+    color: #ffffff;
+    width: 100%;
+    border-radius: 10px;
+  }
+  nav .nav-container .menu .overlay div .nav-links li:hover {
+    color: #000000;
+    background-color: yellow;
+  }
+  nav .nav-container .menu .overlay div .nav-links li a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.8em;
+    font-weight: 500;
+    width: 20em;
+  }
   .external-links {
     width: 120px;
     background-color: white;
