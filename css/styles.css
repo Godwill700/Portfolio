@@ -328,6 +328,10 @@ nav .nav-container .menu .overlay div .nav-links li a {
   color: #012132;
 }
 
+#message .content {
+  padding: 20px;
+}
+
 #message .content p {
   font-size: 1.2em;
 }
@@ -945,6 +949,9 @@ footer .copy {
     -webkit-box-shadow: -3px 3px 10px #012132;
             box-shadow: -3px 3px 10px #012132;
   }
+  #home .home-container {
+    padding: 20px;
+  }
   #about .about-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -995,7 +1002,7 @@ footer .copy {
     height: auto;
   }
   #contact .contact-container {
-    width: 85%;
+    width: 90%;
   }
   footer {
     width: 90%;

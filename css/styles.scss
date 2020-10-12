@@ -282,8 +282,11 @@ nav {
   @include vhflexCenter();
   background: $contrastColor;
   color: $mainBlue;
-  .content p {
-    font-size: $regFontSize;
+  .content {
+    padding: 20px;
+    p {
+      font-size: $regFontSize;
+    }
   }
 }
 #projects {
@@ -756,6 +759,11 @@ footer {
   .external-links {
     @include externalSmalldevice();
   }
+  #home {
+    .home-container {
+      padding: 20px;
+    }
+  }
   #about {
     .about-wrapper {
       display: flex;
@@ -795,7 +803,7 @@ footer {
   #contact {
     height: auto;
     .contact-container {
-      width: 85%;
+      width: 90%;
     }
   }
   footer {
