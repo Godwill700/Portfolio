@@ -182,7 +182,7 @@ nav .nav-container .menu .overlay div .nav-links li {
 
 nav .nav-container .menu .overlay div .nav-links li:hover {
   color: #000000;
-  background-color: #fffc5b;
+  background-color: #d3e0e6;
 }
 
 nav .nav-container .menu .overlay div .nav-links li a {
@@ -261,7 +261,7 @@ nav .nav-container .menu .overlay div .nav-links li a {
 }
 
 #home .home-container .brand p {
-  color: #fffc5b;
+  color: #d3e0e6;
   padding-left: 5px;
 }
 
@@ -278,7 +278,7 @@ nav .nav-container .menu .overlay div .nav-links li a {
 
 #home .home-container .home-nav a:hover,
 #home .home-container .home-nav a a:hover {
-  color: #fffc5b;
+  color: #d3e0e6;
   text-decoration: underline;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -286,7 +286,7 @@ nav .nav-container .menu .overlay div .nav-links li a {
 
 #home .home-container .home-nav b,
 #home .home-container .home-nav a b {
-  color: #fffc5b;
+  color: #d3e0e6;
 }
 
 #home .home-container .scroll-container {
@@ -299,14 +299,14 @@ nav .nav-container .menu .overlay div .nav-links li a {
 
 #home .home-container .scroll-container .fas {
   font-size: 1.6em;
-  color: #fffc5b;
+  color: #d3e0e6;
   padding: 5px;
   display: block;
 }
 
 #home .home-container .scroll-container .mouse-scroll {
   text-decoration: none;
-  color: #fffc5b;
+  color: #d3e0e6;
   display: inline-block;
 }
 
@@ -325,7 +325,7 @@ nav .nav-container .menu .overlay div .nav-links li a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #fffc5b;
+  background: #d3e0e6;
   color: #012132;
 }
 
@@ -433,10 +433,10 @@ nav .nav-container .menu .overlay div .nav-links li a {
 
 #projects .project-tile .inner-container .learn-more-container .learn-more, #projects .project-tile .inner-container .learn-more-container .code {
   text-decoration: none;
-  border: 1px solid #fffc5b;
+  border: 1px solid #d3e0e6;
   border-radius: 5px;
   padding: 10px;
-  color: #fffc5b;
+  color: #d3e0e6;
   margin: 5%;
 }
 
@@ -460,7 +460,7 @@ nav .nav-container .menu .overlay div .nav-links li a {
 
 #projects .project-tile span {
   display: inline-block;
-  color: #fffc5b;
+  color: #d3e0e6;
   position: absolute;
   bottom: 3px;
   text-transform: uppercase;
@@ -478,7 +478,7 @@ nav .nav-container .menu .overlay div .nav-links li a {
   margin: 40px 0px;
   padding-top: 30px;
   font-size: 2.8em;
-  color: #fffc5b;
+  color: #d3e0e6;
 }
 
 #about .about-wrapper {
@@ -522,7 +522,7 @@ nav .nav-container .menu .overlay div .nav-links li a {
 }
 
 #about .competencies-container {
-  background: #fffc5b;
+  background: #d3e0e6;
   color: #012132;
   height: 60vh;
 }
@@ -612,7 +612,7 @@ nav .nav-container .menu .overlay div .nav-links li a {
   text-transform: uppercase;
   margin-top: 20px;
   background: #012132;
-  color: #fffc5b;
+  color: #d3e0e6;
   border: none;
   border-radius: 5px;
   -webkit-transition: all 0.3s ease-in-out;
@@ -620,7 +620,7 @@ nav .nav-container .menu .overlay div .nav-links li a {
 }
 
 #contact .contact-container #send-inquiry:hover {
-  background: #fffc5b;
+  background: #d3e0e6;
   color: #012132;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -934,7 +934,7 @@ footer .copy {
   }
   nav .nav-container .menu .overlay div .nav-links li:hover {
     color: #000000;
-    background-color: #fffc5b;
+    background-color: #d3e0e6;
   }
   nav .nav-container .menu .overlay div .nav-links li a {
     text-decoration: none;
