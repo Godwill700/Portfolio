@@ -182,7 +182,7 @@ nav .nav-container .menu .overlay div .nav-links li {
 
 nav .nav-container .menu .overlay div .nav-links li:hover {
   color: #000000;
-  background-color: #d3e0e6;
+  background-color: #eeef20;
 }
 
 nav .nav-container .menu .overlay div .nav-links li a {
@@ -261,7 +261,7 @@ nav .nav-container .menu .overlay div .nav-links li a {
 }
 
 #home .home-container .brand p {
-  color: #d3e0e6;
+  color: #eeef20;
   padding-left: 5px;
 }
 
@@ -278,7 +278,7 @@ nav .nav-container .menu .overlay div .nav-links li a {
 
 #home .home-container .home-nav a:hover,
 #home .home-container .home-nav a a:hover {
-  color: #d3e0e6;
+  color: #eeef20;
   text-decoration: underline;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -286,10 +286,10 @@ nav .nav-container .menu .overlay div .nav-links li a {
 
 #home .home-container .home-nav b,
 #home .home-container .home-nav a b {
-  color: #d3e0e6;
+  color: #eeef20;
 }
 
-#home .home-container .scroll-container {
+.scroll-container {
   position: absolute;
   width: 20%;
   right: 40%;
@@ -297,21 +297,49 @@ nav .nav-container .menu .overlay div .nav-links li a {
   text-align: center;
 }
 
-#home .home-container .scroll-container .fas {
+.scroll-container .fas {
   font-size: 1.6em;
-  color: #d3e0e6;
+  color: #eeef20;
   padding: 5px;
   display: block;
 }
 
-#home .home-container .scroll-container .mouse-scroll {
+.mouse-scroll {
   text-decoration: none;
-  color: #d3e0e6;
+  color: #eeef20;
   display: inline-block;
 }
 
-#home .home-container .scroll-container .mouse-scroll .scroll-text {
+.mouse-scroll .scroll-text {
   font-size: 0.65em;
+}
+
+.scroll-container {
+  -webkit-animation: MoveUpDown 2.5s infinite;
+          animation: MoveUpDown 2.5s infinite;
+  position: absolute;
+  left: 50;
+  bottom: 1em;
+}
+
+@-webkit-keyframes MoveUpDown {
+  0% {
+    bottom: 1em;
+  }
+  50% {
+    bottom: -1.6em;
+    opacity: 0.1;
+  }
+}
+
+@keyframes MoveUpDown {
+  0% {
+    bottom: 1em;
+  }
+  50% {
+    bottom: -1.6em;
+    opacity: 0.1;
+  }
 }
 
 #message {
@@ -325,16 +353,15 @@ nav .nav-container .menu .overlay div .nav-links li a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #d3e0e6;
+  background: #eeef20;
   color: #012132;
 }
 
-#message .content {
-  padding: 20px;
-}
-
 #message .content p {
-  font-size: 1.2em;
+  font-size: 3em;
+  text-shadow: #cbcbcb;
+  font-weight: 600;
+  padding: 4em;
 }
 
 #projects {
@@ -433,10 +460,10 @@ nav .nav-container .menu .overlay div .nav-links li a {
 
 #projects .project-tile .inner-container .learn-more-container .learn-more, #projects .project-tile .inner-container .learn-more-container .code {
   text-decoration: none;
-  border: 1px solid #d3e0e6;
+  border: 1px solid #eeef20;
   border-radius: 5px;
   padding: 10px;
-  color: #d3e0e6;
+  color: #eeef20;
   margin: 5%;
 }
 
@@ -460,12 +487,63 @@ nav .nav-container .menu .overlay div .nav-links li a {
 
 #projects .project-tile span {
   display: inline-block;
-  color: #d3e0e6;
+  color: #eeef20;
   position: absolute;
   bottom: 3px;
   text-transform: uppercase;
-  font-size: 0.8em;
-  font-style: italic;
+  font-size: 0.9em;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.svg-container {
+  margin-top: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+}
+
+.svg-container img {
+  width: 50%;
+}
+
+.hi-intro {
+  font-size: 0.7em;
+  position: absolute;
+  right: 42%;
+  top: 12%;
+  -webkit-animation: flash 3s infinite;
+          animation: flash 3s infinite;
+  position: absolute;
+  left: 50;
+  bottom: 1em;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    bottom: 1em;
+  }
+  50% {
+    bottom: 1.6em;
+    opacity: 0;
+    -webkit-transform: translateY(0.8em);
+            transform: translateY(0.8em);
+  }
+}
+
+@keyframes flash {
+  0% {
+    bottom: 1em;
+  }
+  50% {
+    bottom: 1.6em;
+    opacity: 0;
+    -webkit-transform: translateY(0.8em);
+            transform: translateY(0.8em);
+  }
 }
 
 #about {
@@ -475,10 +553,9 @@ nav .nav-container .menu .overlay div .nav-links li a {
 
 #about h1 {
   text-align: center;
-  margin: 40px 0px;
   padding-top: 30px;
   font-size: 2.8em;
-  color: #d3e0e6;
+  color: #eeef20;
 }
 
 #about .about-wrapper {
@@ -522,7 +599,7 @@ nav .nav-container .menu .overlay div .nav-links li a {
 }
 
 #about .competencies-container {
-  background: #d3e0e6;
+  background: #eeef20;
   color: #012132;
   height: 60vh;
 }
@@ -598,6 +675,10 @@ nav .nav-container .menu .overlay div .nav-links li a {
   border-radius: 3px;
 }
 
+#contact .contact-container input:focus {
+  outline-color: #012132;
+}
+
 #contact .contact-container textarea {
   padding: 10px 5px 5px 5px;
   font-size: 1em;
@@ -612,7 +693,7 @@ nav .nav-container .menu .overlay div .nav-links li a {
   text-transform: uppercase;
   margin-top: 20px;
   background: #012132;
-  color: #d3e0e6;
+  color: #eeef20;
   border: none;
   border-radius: 5px;
   -webkit-transition: all 0.3s ease-in-out;
@@ -620,7 +701,7 @@ nav .nav-container .menu .overlay div .nav-links li a {
 }
 
 #contact .contact-container #send-inquiry:hover {
-  background: #d3e0e6;
+  background: #eeef20;
   color: #012132;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -689,6 +770,9 @@ footer .copy {
 
 /********** Desktop**********/
 @media (min-width: 767px) and (max-width: 991px) {
+  #message .content p {
+    padding: 2em;
+  }
   #projects {
     height: auto;
   }
@@ -708,6 +792,10 @@ footer .copy {
             column-gap: 2.5em;
     row-gap: 2.5em;
   }
+  .hi-intro {
+    font-size: 0.53em;
+    right: 41%;
+  }
   #contact .contact-container {
     width: 70%;
   }
@@ -721,6 +809,9 @@ footer .copy {
     border-radius: 5px;
     -webkit-box-shadow: -3px 3px 10px #012132;
             box-shadow: -3px 3px 10px #012132;
+  }
+  #message .content p {
+    padding: 1em;
   }
   #about .about-wrapper {
     height: auto;
@@ -756,6 +847,10 @@ footer .copy {
     -webkit-column-gap: 1em;
             column-gap: 1em;
     row-gap: 1em;
+  }
+  .hi-intro {
+    font-size: 0.51em;
+    right: 41%;
   }
   #contact {
     height: 90vh;
@@ -934,7 +1029,7 @@ footer .copy {
   }
   nav .nav-container .menu .overlay div .nav-links li:hover {
     color: #000000;
-    background-color: #d3e0e6;
+    background-color: #eeef20;
   }
   nav .nav-container .menu .overlay div .nav-links li a {
     text-decoration: none;
@@ -973,6 +1068,9 @@ footer .copy {
     padding: 15px;
     font: size 0.7em;
   }
+  #message .content p {
+    padding: 0.5em;
+  }
   #projects {
     height: auto;
   }
@@ -991,6 +1089,11 @@ footer .copy {
     -webkit-column-gap: 2.5em;
             column-gap: 2.5em;
     row-gap: 2.5em;
+  }
+  .hi-intro {
+    font-size: 0.3em;
+    right: 40.5%;
+    top: 10%;
   }
   #about .about-wrapper {
     height: auto;

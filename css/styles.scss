@@ -1,10 +1,12 @@
 $fontFamily: "Fira Sans", sans-serif;
 $regFontSize: 1.2em;
+$messegeFontSize: 3em;
 $headFontSize: 2.8em;
 $formFont: 1em;
 $darkBackcolor: #ffffff;
-// $contrastColor:#EDED64;
-$contrastColor: #d3e0e6;
+// $contrastColor: #ffc402;
+// $contrastColor: #d3e0e6;
+$contrastColor: #eeef20;
 $mainBlue: #012132;
 $auto: #000000;
 $menuBackground: #000000;
@@ -255,38 +257,60 @@ nav {
         color: $contrastColor;
       }
     }
-    .scroll-container {
-      position: absolute;
-      width: 20%;
-      right: 40%;
-      bottom: 1.9em;
-      text-align: center;
+  }
+}
 
-      .fas {
-        font-size: 1.6em;
-        color: $contrastColor;
-        padding: 5px;
-        display: block;
-      }
-      .mouse-scroll {
-        text-decoration: none;
-        color: $contrastColor;
-        display: inline-block;
-        .scroll-text {
-          font-size: 0.65em;
-        }
-      }
+.scroll-container {
+  position: absolute;
+  width: 20%;
+  right: 40%;
+  bottom: 1.9em;
+  text-align: center;
+
+  .fas {
+    font-size: 1.6em;
+    color: $contrastColor;
+    padding: 5px;
+    display: block;
+  }
+}
+
+.mouse-scroll {
+  text-decoration: none;
+  color: $contrastColor;
+  display: inline-block;
+  .scroll-text {
+    font-size: 0.65em;
+  }
+}
+
+.scroll-container {
+  animation: MoveUpDown 2.5s infinite;
+  position: absolute;
+  left: 50;
+  bottom: 1em;
+
+  @keyframes MoveUpDown {
+    0% {
+      bottom: 1em;
+    }
+    50% {
+      bottom: -1.6em;
+      opacity: 0.1;
     }
   }
 }
+
 #message {
   @include vhflexCenter();
   background: $contrastColor;
   color: $mainBlue;
   .content {
-    padding: 20px;
     p {
-      font-size: $regFontSize;
+      font-size: $messegeFontSize;
+      text-shadow: #cbcbcb;
+      font-weight: 600;
+      padding: 4em;
     }
   }
 }
@@ -373,17 +397,55 @@ nav {
       position: absolute;
       bottom: 3px;
       text-transform: uppercase;
-      font-size: 0.8em;
-      font-style: italic;
+      font-size: 0.9em;
+      font-weight: 500;
+      opacity: 0.8;
+      // font-style: italic;
     }
   }
 }
+
+.svg-container {
+  margin-top: 5em;
+  display: flex;
+  justify-content: space-around;
+
+  position: relative;
+
+  img {
+    width: 50%;
+  }
+}
+.hi-intro {
+  font-size: 0.7em;
+  position: absolute;
+  right: 42%;
+  top: 12%;
+
+  animation: flash 3s infinite;
+  position: absolute;
+  left: 50;
+  bottom: 1em;
+
+  @keyframes flash {
+    0% {
+      bottom: 1em;
+      // font-weight: 400;
+    }
+    50% {
+      bottom: 1.6em;
+      opacity: 0;
+      transform: translateY(0.8em);
+    }
+  }
+}
+
 #about {
   background: $mainBlue;
   color: $darkBackcolor;
   h1 {
     text-align: center;
-    margin: 40px 0px;
+    // margin: 40px 0px;
     padding-top: 30px;
     font-size: $headFontSize;
     color: $contrastColor;
@@ -476,6 +538,10 @@ nav {
       background: $formInput;
       border: none;
       border-radius: 3px;
+
+      &:focus {
+        outline-color: $mainBlue;
+      }
     }
     textarea {
       padding: 10px 5px 5px 5px;
@@ -551,6 +617,11 @@ footer {
 
 /********** Desktop**********/
 @media (min-width: 767px) and (max-width: 991px) {
+  #message {
+    .content p {
+      padding: 2em;
+    }
+  }
   #projects {
     height: auto;
     .grid-wrapper {
@@ -563,6 +634,12 @@ footer {
       row-gap: 2.5em;
     }
   }
+
+  .hi-intro {
+    font-size: 0.53em;
+    right: 41%;
+  }
+
   #contact {
     .contact-container {
       width: 70%;
@@ -573,6 +650,11 @@ footer {
 @media (min-width: 575px) and (max-width: 767px) {
   .external-links {
     @include externalSmalldevice();
+  }
+  #message {
+    .content p {
+      padding: 1em;
+    }
   }
   #about {
     .about-wrapper {
@@ -596,6 +678,10 @@ footer {
       column-gap: 1em;
       row-gap: 1em;
     }
+  }
+  .hi-intro {
+    font-size: 0.51em;
+    right: 41%;
   }
   #contact {
     height: 90vh;
@@ -780,6 +866,11 @@ footer {
       }
     }
   }
+  #message {
+    .content p {
+      padding: 0.5em;
+    }
+  }
   #projects {
     height: auto;
     .grid-wrapper {
@@ -792,6 +883,13 @@ footer {
       row-gap: 2.5em;
     }
   }
+
+  .hi-intro {
+    font-size: 0.3em;
+    right: 40.5%;
+    top: 10%;
+  }
+
   #about {
     .about-wrapper {
       height: auto;
