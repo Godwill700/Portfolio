@@ -302,23 +302,10 @@ nav .nav-container .menu .overlay div .nav-links li a {
   color: #eeef20;
   padding: 5px;
   display: block;
-}
-
-.mouse-scroll {
-  text-decoration: none;
-  color: #eeef20;
-  display: inline-block;
-}
-
-.mouse-scroll .scroll-text {
-  font-size: 0.65em;
-}
-
-.scroll-container {
-  -webkit-animation: MoveUpDown 2.5s infinite;
-          animation: MoveUpDown 2.5s infinite;
+  -webkit-animation: MoveUpDown 3s infinite;
+          animation: MoveUpDown 3s infinite;
   position: absolute;
-  left: 50;
+  right: 40%;
   bottom: 1em;
 }
 
@@ -340,6 +327,16 @@ nav .nav-container .menu .overlay div .nav-links li a {
     bottom: -1.6em;
     opacity: 0.1;
   }
+}
+
+.mouse-scroll {
+  text-decoration: none;
+  color: #eeef20;
+  display: inline-block;
+}
+
+.mouse-scroll .scroll-text {
+  font-size: 0.65em;
 }
 
 #message {

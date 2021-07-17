@@ -272,6 +272,20 @@ nav {
     color: $contrastColor;
     padding: 5px;
     display: block;
+    animation: MoveUpDown 3s infinite;
+    position: absolute;
+    right: 40%;
+    bottom: 1em;
+
+    @keyframes MoveUpDown {
+      0% {
+        bottom: 1em;
+      }
+      50% {
+        bottom: -1.6em;
+        opacity: 0.1;
+      }
+    }
   }
 }
 
@@ -281,23 +295,6 @@ nav {
   display: inline-block;
   .scroll-text {
     font-size: 0.65em;
-  }
-}
-
-.scroll-container {
-  animation: MoveUpDown 2.5s infinite;
-  position: absolute;
-  left: 50;
-  bottom: 1em;
-
-  @keyframes MoveUpDown {
-    0% {
-      bottom: 1em;
-    }
-    50% {
-      bottom: -1.6em;
-      opacity: 0.1;
-    }
   }
 }
 
