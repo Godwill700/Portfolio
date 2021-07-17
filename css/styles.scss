@@ -268,13 +268,12 @@ nav {
   text-align: center;
 
   .fas {
-    font-size: 1.6em;
+    font-size: 1.4em;
     color: $contrastColor;
     padding: 5px;
     display: block;
     animation: MoveUpDown 3s infinite;
-    position: absolute;
-    right: 40%;
+    position: relative;
     bottom: 1em;
 
     @keyframes MoveUpDown {
@@ -414,9 +413,13 @@ nav {
   }
 }
 .hi-intro {
+  b {
+    color: $mainBlue;
+  }
+
   font-size: 0.7em;
   position: absolute;
-  right: 42%;
+  right: 40%;
   top: 12%;
 
   animation: flash 3s infinite;
@@ -632,9 +635,15 @@ footer {
     }
   }
 
+  .svg-container {
+    img {
+      width: 80%;
+    }
+  }
+
   .hi-intro {
-    font-size: 0.53em;
-    right: 41%;
+    font-size: 0.6em;
+    right: 34%;
   }
 
   #contact {
@@ -653,6 +662,7 @@ footer {
       padding: 1em;
     }
   }
+
   #about {
     .about-wrapper {
       height: auto;
@@ -676,9 +686,16 @@ footer {
       row-gap: 1em;
     }
   }
+
+  .svg-container {
+    img {
+      width: 80%;
+    }
+  }
+
   .hi-intro {
-    font-size: 0.51em;
-    right: 41%;
+    font-size: 0.6em;
+    right: 38%;
   }
   #contact {
     height: 90vh;
@@ -881,10 +898,20 @@ footer {
     }
   }
 
+  .svg-container {
+    img {
+      width: 100%;
+    }
+  }
+
   .hi-intro {
-    font-size: 0.3em;
-    right: 40.5%;
+    right: 30.5%;
     top: 10%;
+
+    b {
+      font-size: 0.95em;
+      color: inherit;
+    }
   }
 
   #about {

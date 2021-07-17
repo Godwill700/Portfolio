@@ -298,14 +298,13 @@ nav .nav-container .menu .overlay div .nav-links li a {
 }
 
 .scroll-container .fas {
-  font-size: 1.6em;
+  font-size: 1.4em;
   color: #eeef20;
   padding: 5px;
   display: block;
   -webkit-animation: MoveUpDown 3s infinite;
           animation: MoveUpDown 3s infinite;
-  position: absolute;
-  right: 40%;
+  position: relative;
   bottom: 1em;
 }
 
@@ -510,13 +509,17 @@ nav .nav-container .menu .overlay div .nav-links li a {
 .hi-intro {
   font-size: 0.7em;
   position: absolute;
-  right: 42%;
+  right: 40%;
   top: 12%;
   -webkit-animation: flash 3s infinite;
           animation: flash 3s infinite;
   position: absolute;
   left: 50;
   bottom: 1em;
+}
+
+.hi-intro b {
+  color: #012132;
 }
 
 @-webkit-keyframes flash {
@@ -789,9 +792,12 @@ footer .copy {
             column-gap: 2.5em;
     row-gap: 2.5em;
   }
+  .svg-container img {
+    width: 80%;
+  }
   .hi-intro {
-    font-size: 0.53em;
-    right: 41%;
+    font-size: 0.6em;
+    right: 34%;
   }
   #contact .contact-container {
     width: 70%;
@@ -845,9 +851,12 @@ footer .copy {
             column-gap: 1em;
     row-gap: 1em;
   }
+  .svg-container img {
+    width: 80%;
+  }
   .hi-intro {
-    font-size: 0.51em;
-    right: 41%;
+    font-size: 0.6em;
+    right: 38%;
   }
   #contact {
     height: 90vh;
@@ -1087,10 +1096,16 @@ footer .copy {
             column-gap: 2.5em;
     row-gap: 2.5em;
   }
+  .svg-container img {
+    width: 100%;
+  }
   .hi-intro {
-    font-size: 0.3em;
-    right: 40.5%;
+    right: 30.5%;
     top: 10%;
+  }
+  .hi-intro b {
+    font-size: 0.95em;
+    color: inherit;
   }
   #about .about-wrapper {
     height: auto;
