@@ -4,8 +4,6 @@ $messegeFontSize: 3em;
 $headFontSize: 2.8em;
 $formFont: 1em;
 $darkBackcolor: #ffffff;
-// $contrastColor: #ffc402;
-// $contrastColor: #d3e0e6;
 $contrastColor: #eeef20;
 $mainBlue: #012132;
 $auto: #000000;
@@ -264,34 +262,41 @@ nav {
   position: absolute;
   width: 20%;
   right: 40%;
-  bottom: 1.9em;
+  bottom: 4rem;
   text-align: center;
 
   .fas {
-    font-size: 1.4em;
+    font-size: 0.8em;
     color: $contrastColor;
     padding: 5px;
-    display: block;
-    animation: MoveUpDown 3s infinite;
-    position: relative;
-    bottom: 1em;
+    animation: MoveUpDown 1.8s infinite;
+    position: absolute;
+    bottom: 3em;
+    transform: translateX(95%);
 
     @keyframes MoveUpDown {
       0% {
-        bottom: 1em;
+        bottom: 3.5em;
       }
       50% {
-        bottom: -1.6em;
-        opacity: 0.1;
+        bottom: 2.5em;
+        opacity: 0.01;
       }
     }
+  }
+
+  .icon-tabler-rectangle-vertical {
+    stroke: $contrastColor;
+    position: absolute;
+    transform: translateX(10%);
+    bottom: 1.1rem;
   }
 }
 
 .mouse-scroll {
   text-decoration: none;
   color: $contrastColor;
-  display: inline-block;
+  // display: inline-block;
   .scroll-text {
     font-size: 0.65em;
   }

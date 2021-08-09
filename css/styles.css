@@ -293,45 +293,53 @@ nav .nav-container .menu .overlay div .nav-links li a {
   position: absolute;
   width: 20%;
   right: 40%;
-  bottom: 1.9em;
+  bottom: 4rem;
   text-align: center;
 }
 
 .scroll-container .fas {
-  font-size: 1.4em;
+  font-size: 0.8em;
   color: #eeef20;
   padding: 5px;
-  display: block;
-  -webkit-animation: MoveUpDown 3s infinite;
-          animation: MoveUpDown 3s infinite;
-  position: relative;
-  bottom: 1em;
+  -webkit-animation: MoveUpDown 1.8s infinite;
+          animation: MoveUpDown 1.8s infinite;
+  position: absolute;
+  bottom: 3em;
+  -webkit-transform: translateX(95%);
+          transform: translateX(95%);
 }
 
 @-webkit-keyframes MoveUpDown {
   0% {
-    bottom: 1em;
+    bottom: 3.5em;
   }
   50% {
-    bottom: -1.6em;
-    opacity: 0.1;
+    bottom: 2.5em;
+    opacity: 0.01;
   }
 }
 
 @keyframes MoveUpDown {
   0% {
-    bottom: 1em;
+    bottom: 3.5em;
   }
   50% {
-    bottom: -1.6em;
-    opacity: 0.1;
+    bottom: 2.5em;
+    opacity: 0.01;
   }
+}
+
+.scroll-container .icon-tabler-rectangle-vertical {
+  stroke: #eeef20;
+  position: absolute;
+  -webkit-transform: translateX(10%);
+          transform: translateX(10%);
+  bottom: 1.1rem;
 }
 
 .mouse-scroll {
   text-decoration: none;
   color: #eeef20;
-  display: inline-block;
 }
 
 .mouse-scroll .scroll-text {
