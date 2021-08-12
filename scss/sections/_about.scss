@@ -1,0 +1,183 @@
+// START ABOUT SVG STYLES
+.svg-container {
+  margin-top: 5em;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+
+  img {
+    width: 50%;
+  }
+}
+.hi-intro {
+  b {
+    color: $mainBlue;
+  }
+
+  font-size: 0.7em;
+  position: absolute;
+  right: 40%;
+  top: 12%;
+  animation: flash 3s infinite;
+  position: absolute;
+  left: 50;
+  bottom: 1em;
+
+  @keyframes flash {
+    0% {
+      bottom: 1em;
+      // font-weight: 400;
+    }
+    50% {
+      bottom: 1.6em;
+      opacity: 0;
+      transform: translateY(0.8em);
+    }
+  }
+}
+
+.about {
+  background: $mainBlue;
+
+  color: $darkBackcolor;
+  h1 {
+    text-align: center;
+    margin: 40px 0px;
+    padding-top: 30px;
+    font-size: $headFontSize;
+    color: $contrastColor;
+  }
+
+  .about-wrapper {
+    height: auto;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 400px auto;
+    column-gap: 1em;
+  }
+  .personal {
+    margin: 30px 50px 30px;
+    padding: 20px;
+    background: #011c2b;
+    border-radius: 10px;
+    height: fit-content;
+    b {
+      font-size: 0.8em;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 1.1em;
+    }
+  }
+  .profile {
+    margin: 20px;
+    padding: 10px 40px;
+    p {
+      font-size: $regFontSize;
+    }
+  }
+  .competencies-container {
+    background: $contrastColor;
+    color: $mainBlue;
+    height: auto;
+    padding-bottom: 3rem;
+
+    h2 {
+      text-align: center;
+      margin: 40px 0px;
+      padding-top: 60px;
+      text-transform: uppercase;
+      b {
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  .competencies {
+    width: 55%;
+    margin: auto;
+
+    p {
+      margin-bottom: 12px;
+      font-size: $regFontSize;
+    }
+  }
+}
+
+/********** Desktop**********/
+@media (min-width: 767px) and (max-width: 991px) {
+  .svg-container {
+    img {
+      width: 80%;
+    }
+  }
+
+  .hi-intro {
+    font-size: 0.6em;
+    right: 34%;
+  }
+}
+
+/*******Tablet devices********/
+@media (min-width: 575px) and (max-width: 767px) {
+  .svg-container {
+    img {
+      width: 80%;
+    }
+  }
+
+  .hi-intro {
+    font-size: 0.6em;
+    right: 38%;
+  }
+
+  .about {
+    .about-wrapper {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      .personal {
+        width: fit-content;
+        margin: 0px auto;
+      }
+    }
+  }
+}
+
+/********** Mobile phones**********/
+@media (max-width: 575px) {
+  .svg-container {
+    img {
+      width: 100%;
+    }
+  }
+
+  .hi-intro {
+    right: 30.5%;
+    top: 10%;
+
+    b {
+      font-size: 0.95em;
+      color: inherit;
+    }
+  }
+  .about {
+    .about-wrapper {
+      display: flex;
+      flex-direction: column;
+      .personal {
+        width: fit-content;
+        margin: 0px 20px;
+      }
+      .profile {
+        margin: 15px;
+        padding: 15px;
+        font: size 0.7em;
+      }
+    }
+  }
+  .competencies {
+    width: 90%;
+    margin: auto;
+  }
+}

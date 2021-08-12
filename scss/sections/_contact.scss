@@ -1,0 +1,94 @@
+#contact {
+  height: 85vh;
+  background: #ececec;
+  h1 {
+    text-align: center;
+    padding-top: 30px;
+    font-size: $headFontSize;
+    color: $mainBlue;
+  }
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+    margin: auto;
+    padding: 10px 20px 50px 20px;
+
+    label {
+      display: block;
+      text-transform: uppercase;
+      b {
+        font-size: 0.8em;
+        letter-spacing: 0.1em;
+      }
+    }
+    input {
+      padding: 16px;
+      margin-bottom: 15px;
+      font-size: $formFont;
+      background: $formInput;
+      border: none;
+      border-radius: 3px;
+    }
+    textarea {
+      padding: 10px 5px 5px 5px;
+      font-size: $formFont;
+      background: $formInput;
+      border: none;
+      border-radius: 3px;
+      resize: vertical;
+    }
+    #send-inquiry {
+      padding: 15px;
+      text-transform: uppercase;
+      margin-top: 20px;
+      background: $mainBlue;
+      color: $contrastColor;
+      border: none;
+      border-radius: 5px;
+      &:hover {
+        background: $contrastColor;
+        color: $mainBlue;
+        transition: $animate;
+        b {
+          font-size: 0.9em;
+        }
+      }
+      b {
+        font-size: 0.8em;
+      }
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+/********** Desktop**********/
+@media (min-width: 767px) and (max-width: 991px) {
+  #contact {
+    .contact-container {
+      width: 70%;
+    }
+  }
+}
+
+/*******Tablet devices********/
+@media (min-width: 575px) and (max-width: 767px) {
+  #contact {
+    height: 90vh;
+    .contact-container {
+      width: 80%;
+    }
+  }
+}
+
+/********** Mobile phones**********/
+@media (max-width: 575px) {
+  #contact {
+    height: auto;
+    .contact-container {
+      width: 90%;
+    }
+  }
+}

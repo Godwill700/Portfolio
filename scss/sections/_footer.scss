@@ -1,0 +1,48 @@
+footer {
+  width: 80%;
+  margin: auto;
+  .footer-container {
+    height: 17vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+  }
+  a {
+    text-decoration: none;
+  }
+  b {
+    color: $footerColor;
+  }
+  .copy {
+    color: $footerColor;
+  }
+}
+
+/*******Tablet devices********/
+@media (min-width: 575px) and (max-width: 767px) {
+  footer {
+    width: 80%;
+    margin: auto;
+    .footer-container {
+      height: 10vh;
+      padding-top: 5px;
+      b {
+        display: none;
+      }
+    }
+  }
+}
+
+/********** Mobile phones**********/
+@media (max-width: 575px) {
+  footer {
+    width: 90%;
+    margin: auto;
+    .footer-container {
+      b {
+        display: none;
+      }
+    }
+  }
+}

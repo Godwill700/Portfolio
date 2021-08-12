@@ -1,0 +1,21 @@
+@mixin vhflexCenter {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin externalSmalldevice {
+  width: 120px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: -3px 3px 10px $mainBlue;
+}
+@mixin topLeftZ {
+  top: 0;
+  left: 0;
+}
