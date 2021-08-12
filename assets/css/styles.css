@@ -447,20 +447,62 @@ nav {
 .home-container .home-nav,
 .home-container .home-nav a {
   text-decoration: none;
-  font-weight: 200;
+  font-weight: 500;
   text-transform: uppercase;
   color: #ffffff;
   padding-top: 90px;
   text-align: center;
   margin: 0px 10px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #eeef20), color-stop(0, #000)) right/200% 100% no-repeat;
+  background: linear-gradient(90deg, #eeef20 50%, #000 0) right/200% 100% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-transition: 0.3s 0.3s linear;
+  transition: 0.3s 0.3s linear;
+}
+
+.home-container .home-nav ::before,
+.home-container .home-nav a ::before {
+  content: "";
+  position: absolute;
+  width: 1.4em;
+  height: 4px;
+  inset: 32rem 10rem 18rem 16rem;
+  opacity: 0;
+  background: #eeef20;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: 0.2s 0.6s, inset 0.3s 0.3s, width 0.3s, -webkit-transform 0.3s;
+  transition: 0.2s 0.6s, inset 0.3s 0.3s, width 0.3s, -webkit-transform 0.3s;
+  transition: 0.2s 0.6s, inset 0.3s 0.3s, transform 0.3s, width 0.3s;
+  transition: 0.2s 0.6s, inset 0.3s 0.3s, transform 0.3s, width 0.3s, -webkit-transform 0.3s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.home-container .home-nav :hover:before,
+.home-container .home-nav a :hover:before {
+  opacity: 1;
+  inset: auto 15% 15rem 20%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 10%;
+  -webkit-transition: 0.2s, inset 0.3s 0.2s, width 0.3s 0.5s, -webkit-transform 0.3s 0.5s;
+  transition: 0.2s, inset 0.3s 0.2s, width 0.3s 0.5s, -webkit-transform 0.3s 0.5s;
+  transition: 0.2s, inset 0.3s 0.2s, transform 0.3s 0.5s, width 0.3s 0.5s;
+  transition: 0.2s, inset 0.3s 0.2s, transform 0.3s 0.5s, width 0.3s 0.5s, -webkit-transform 0.3s 0.5s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
 }
 
 .home-container .home-nav a:hover,
 .home-container .home-nav a a:hover {
-  color: #eeef20;
   text-decoration: underline;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  background-position: left;
+  -webkit-transition: 0.3s 0.2s linear;
+  transition: 0.3s 0.2s linear;
 }
 
 .home-container .home-nav b,
@@ -477,34 +519,34 @@ nav {
 }
 
 .home-container .scroll-container .fas {
-  font-size: 0.8em;
+  font-size: 0.5em;
   color: #eeef20;
-  padding: 5px;
-  -webkit-animation: MoveUpDown 1.5s infinite;
-          animation: MoveUpDown 1.5s infinite;
+  padding: 0.32rem;
+  -webkit-animation: MoveUpDown 1.2s infinite;
+          animation: MoveUpDown 1.2s infinite;
   position: absolute;
-  bottom: 3.5em;
+  bottom: 3.2rem;
   -webkit-transform: translateX(95%);
           transform: translateX(95%);
 }
 
 @-webkit-keyframes MoveUpDown {
   0% {
-    bottom: 3.5em;
+    bottom: 4rem;
   }
   50% {
-    bottom: 2.5em;
-    opacity: 0;
+    bottom: 2rem;
+    opacity: 0.1;
   }
 }
 
 @keyframes MoveUpDown {
   0% {
-    bottom: 3.5em;
+    bottom: 4rem;
   }
   50% {
-    bottom: 2.5em;
-    opacity: 0;
+    bottom: 2rem;
+    opacity: 0.1;
   }
 }
 
@@ -513,7 +555,29 @@ nav {
   position: absolute;
   -webkit-transform: translateX(10%);
           transform: translateX(10%);
-  bottom: 1.1rem;
+  bottom: 1.3rem;
+  -webkit-animation: MoveUpDownDelay 1.2s infinite linear;
+          animation: MoveUpDownDelay 1.2s infinite linear;
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
+}
+
+@-webkit-keyframes MoveUpDownDelay {
+  0% {
+    bottom: 1.5rem;
+  }
+  50% {
+    bottom: 2.5rem;
+  }
+}
+
+@keyframes MoveUpDownDelay {
+  0% {
+    bottom: 1.5rem;
+  }
+  50% {
+    bottom: 2.5rem;
+  }
 }
 
 .home-container .scroll-container .mouse-scroll {
