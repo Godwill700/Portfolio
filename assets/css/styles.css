@@ -1117,6 +1117,11 @@ nav {
   border-radius: 3px;
 }
 
+#contact .contact-container input:focus {
+  outline-color: #012132;
+  outline-style: solid;
+}
+
 #contact .contact-container textarea {
   padding: 10px 5px 5px 5px;
   font-size: 1em;
@@ -1124,6 +1129,11 @@ nav {
   border: none;
   border-radius: 3px;
   resize: vertical;
+}
+
+#contact .contact-container textarea:focus {
+  outline-color: #012132;
+  outline-style: solid;
 }
 
 #contact .contact-container #send-inquiry {
